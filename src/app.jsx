@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import VideoList from "./component/video_list";
+import VideoList from "./component/video_list/video_list";
 
 function App() {
   const [videos, setVideos] = useState([]); //초기값은 빈배열
