@@ -2,7 +2,7 @@
   display: flex;
   height: 4rem;
   padding: 0.8em 1em;
-  background-color: black;
+  background: black;
   color: white;
 }
 
@@ -12,7 +12,7 @@
   margin-right: 1em;
 }
 
-input {
+.input {
   flex-basis: 100%;
   font-size: 1.2rem;
   outline: 0;
@@ -21,5 +21,9 @@ input {
 .button {
   background-color: darkgrey;
   outline: 0;
-  color: white;
+}
+
+.buttonImg {
+  height: 100%;
+  padding: 0.5em 0.2em;
 }

@@ -1,9 +1,5 @@
-import styles from "./search_header.module.css";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import SearchIcon from "@material-ui/icons/Search";
-import { useRef } from "react";
-
-import React from "react";
+import styles from './search_header.module.css';
+import React, { useRef } from 'react';
 
 const SearchHeader = ({ onSearch }) => {
   const inputRef = useRef();
@@ -15,15 +11,15 @@ const SearchHeader = ({ onSearch }) => {
     handleSearch();
   };
 
-  const onKeyPress = (event) => {
-    if (event.key === "Enter") {
+  const onKeyPress = event => {
+    if (event.key === 'Enter') {
       handleSearch();
     }
   };
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <YouTubeIcon style={{ color: "red" }} fontSize="large" />
+        <img className={styles.img} src="/images/logo.png" alt="logo" />
         <h1 className={styles.title}>Youtube</h1>
       </div>
       <input
@@ -34,7 +30,11 @@ const SearchHeader = ({ onSearch }) => {
         onKeyPress={onKeyPress}
       />
       <button className={styles.button} type="submit" onClick={onClick}>
-        <SearchIcon style={{ color: "grey[50]" }} />
+        <img
+          className={styles.buttonImg}
+          src="/images/search.png"
+          alt="search"
+        />
       </button>
     </header>
   );
